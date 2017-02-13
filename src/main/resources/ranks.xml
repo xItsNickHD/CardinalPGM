@@ -1,24 +1,26 @@
 <ranks>
-    <rank name="Default" default="true">
+    <rank name="Default" flair="`8" default="true">
         <permission>cardinal.chat.team</permission>
         <permission>cardinal.chat.global</permission>
     </rank>
-    <rank name="Moderator" staff="true" flair="`c❖" parent="Default">
-        <permission>cardinal.say</permission>
-        <permission>cardinal.broadcast</permission>
+    <rank name="Trainee" staff="true" flair="`3`lTRAINEE `3" parent="Default">
         <permission>cardinal.mod</permission>
-        <permission>tnt.defuse</permission>
-        <permission>cardinal.reload</permission>
-        <permission>cardinal.newmaps</permission>
-        <permission>cardinal.cancel</permission>
-        <permission>cardinal.chat.admin</permission>
+        <permission>cardinal.teleport</permission>
+        <permission>cardinal.punish.warn</permission>
+        <permission>cardinal.punish.kick</permission>
+        <permission>cardinal.punish.mute</permission>
         <permission>cardinal.match.setnext</permission>
         <permission>cardinal.match.end</permission>
         <permission>cardinal.match.start</permission>
         <permission>cardinal.match.cycle</permission>
+        <permission>cardinal.chat.admin</permission>
+    </rank>
+    <rank name="Moderator" staff="true" flair="`e`lMOD `e" parent="Trainee">
+        <permission>cardinal.reload</permission>
+        <permission>cardinal.newmaps</permission>
+        <permission>cardinal.cancel</permission>
         <permission>cardinal.team.force</permission>
         <permission>cardinal.team.alias</permission>
-        <permission>cardinal.teleport</permission>
         <permission>cardinal.whitelist.reload</permission>
         <permission>cardinal.whitelist.toggle</permission>
         <permission>cardinal.whitelist.on</permission>
@@ -32,11 +34,16 @@
         <permission>cardinal.whitelist.team</permission>
         <permission>cardinal.whitelist.kick</permission>
         <permission>cardinal.whitelist.bypass</permission>
-        <permission>cardinal.punish.warn</permission>
-        <permission>cardinal.punish.kick</permission>
         <permission>cardinal.punish.ban</permission>
-        <permission>cardinal.punish.mute</permission>
-        <permission>cardinal.punish.freeze</permission>
         <permission>minecraft.command.pardon</permission>
+    </rank>
+    <rank name="Admin" staff="true" flair="`c`lADMIN `c" parent="Moderator">
+        <permission>*</permission>
+    </rank>
+    <rank name="SMT" staff="true" flair="`5`lSMT `5" parent="Admin">
+        <permission>*</permission>
+    </rank>
+    <rank name="Owner" staff="true" flair="`6`lOWNER `6" parent="SMT">
+        <permission>*</permission>
     </rank>
 </ranks>
