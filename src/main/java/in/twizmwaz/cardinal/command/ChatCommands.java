@@ -37,7 +37,7 @@ public class ChatCommands {
             if (GameHandler.getGameHandler().getGlobalMute() && !sender.hasPermission("cardinal.globalmute.override")) {
                 throw new CommandException(ChatConstant.ERROR_GLOBAL_MUTE_ENABLED.asMessage().getMessage(ChatUtil.getLocale(sender)));
             }
-            ChatUtil.getGlobalChannel().sendMessage("<" + Players.getName(sender) + ChatColor.RESET + ">: " + cmd.getJoinedStrings(0));
+            ChatUtil.getGlobalChannel().sendMessage(Players.getName(sender) + ChatColor.RESET + ": " + cmd.getJoinedStrings(0));
         }
     }
 
